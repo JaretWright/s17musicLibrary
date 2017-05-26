@@ -5,17 +5,17 @@
     <title>Albums</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
 
 </head>
 <body>
 <main class="container">
     <h1>Albums</h1>
-
+    <a href="albumDetails.php">Add a new album</a>
     <?php
         //Step 1 - connect to the DB
         $conn = new PDO('mysql:host=localhost;dbname=php','root','admin');
@@ -50,7 +50,7 @@
                       <td>'.$album['artist'].'</td>
                       <td>'.$album['genre'].'</td>
                       <td><a href="albumDetails.php?albumID='.$album['albumID'].'"class="btn btn-primary"</a>Edit</td>
-                      <td><a href="deleteAlbum.php?albumID='.$album['albumID'].'" class="btn btn-danger">Delete</td></tr>';
+                      <td><a href="deleteAlbum.php?albumID='.$album['albumID'].'" class="btn btn-danger confirmation">Delete</td></tr>';
         }
 
     ?>
@@ -58,7 +58,11 @@
 </main>
 </body>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Latest jQuery -->
+<script src="js/jquery-3.2.1.min.js"></script>
 
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/app.js"></script>
 </html>
