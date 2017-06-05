@@ -11,9 +11,7 @@
 
         $albumID = $_GET['albumID'];
         //Step 1 - connect to the database
-        $conn = new PDO('mysql:host=localhost;dbname=php', 'root', 'admin');
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // turn on the error handling
-
+        require_once('db.php');
 
         //Step 2 - create the SQL statement
         $sql = "DELETE FROM albums

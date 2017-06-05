@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Album Details</title>
+<?php
+    $pageTitle = 'Album Details';
+    require_once('header.php')
+?>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-</head>
-<body>
 <main class="container">
+
+
 <h1>Album Details</h1>
 
     <?php
@@ -29,7 +23,7 @@
         if (!empty($albumID))
         {
             //Step 1 connect to the DB
-            $conn = new PDO('mysql:host=localhost;dbname=php','root','admin');
+            require('db.php');
 
             //Step 2 create the SQL query
             $sql = "SELECT * FROM albums WHERE albumID = :albumID";
@@ -73,7 +67,7 @@
         <select name="genre" id="genre">
             <?php
                 //Step 1 - connect to the DB
-                $conn = new PDO('mysql:host=localhost;dbname=php','root','admin');
+                require('db.php');
 
                 //Step 2 - create a SQL script
                 $sql = "SELECT * FROM genres";
@@ -104,8 +98,4 @@
     <button class="btn btn-success col-sm-offset-1">Save</button>
 </form>
 </main>
-</body>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-</html>
+<?php require_once('footer.php') ?>

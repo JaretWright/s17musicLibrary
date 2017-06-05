@@ -31,7 +31,8 @@
     //if it looks like an ok user, save to the DB
     if ($ok)
     {
-        $conn = new PDO('mysql:host=localhost;dbname=php','root','admin');
+        require_once('db.php');
+
         $sql="INSERT INTO users (email, password) 
               VALUES (:email, :password)";
 

@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Registration</title>
+<?php
+$pageTitle = 'Registration';
+require_once('header.php')
+?>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-</head>
-<body>
     <main class="container">
         <h1>User Registration</h1>
         <div class="alert alert-info" id="message">Please create a new user</div>
@@ -35,13 +27,4 @@
             <button class="col-sm-offset-2 btn btn-success btnRegister">Save</button>
         </form>
     </main>
-</body>
-
-<!-- Latest jQuery -->
-<script src="js/jquery-3.2.1.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<script src="js/app.js"></script>
-</html>
+<?php require_once('footer.php') ?>
