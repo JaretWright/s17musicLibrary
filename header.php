@@ -13,6 +13,7 @@
 <body>
 <nav class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
+        <li><a href="default.php" class="navbar-brand">Music Library</a></li>
         <li><a href="albums.php">Albums</a></li>
 
         <?php
